@@ -7,6 +7,8 @@ let initWebRoutes = (app) => {
   router.get("/abc", (req, res) => {
     return res.send("the fuck");
   });
+  router.get("/crud", homeController.getCRUD);
+  router.post("/post-crud", homeController.postCRUD);
   //rest API
   return app.use("/", router);
 };
