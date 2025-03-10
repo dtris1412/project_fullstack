@@ -1,6 +1,7 @@
 "use strict";
 const { INTEGER } = require("sequelize");
 const { Model } = require("sequelize");
+const { roleId } = require("../seeders/seeder-users");
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -19,9 +20,12 @@ module.exports = (sequelize, DataTypes) => {
       firstName: DataTypes.STRING,
       lastName: DataTypes.STRING,
       address: DataTypes.STRING,
+      phonenumber: DataTypes.STRING,
       gender: DataTypes.BOOLEAN,
-      typeRole: DataTypes.STRING,
-      keyRole: DataTypes.STRING,
+      imgae: DataTypes.STRING,
+      roleId: DataTypes.STRING,
+
+      positionId: DataTypes.STRING,
     },
     {
       sequelize,

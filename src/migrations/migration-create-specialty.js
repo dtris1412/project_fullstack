@@ -14,6 +14,9 @@ module.exports = {
       description: {
         type: Sequelize.TEXT,
       },
+      name: {
+        type: Sequelize.STRING,
+      },
 
       createdAt: {
         allowNull: false,
